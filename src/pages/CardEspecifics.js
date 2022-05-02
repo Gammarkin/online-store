@@ -5,6 +5,7 @@ import addToCart from '../services/addToCart';
 import cartItemsCount from '../services/manageCartCount';
 import CartIcon from '../components/CartIcon';
 import FreeShipping from '../components/FreeShipping';
+import Nav from '../components/Nav';
 import '../styles/Especifics.css';
 
 export default class CardEspecifics extends Component {
@@ -122,6 +123,7 @@ export default class CardEspecifics extends Component {
           <p>loading...</p>
         ) : (
           <div className="especifics" id={result.productId}>
+            <Nav />
             <p data-testid="product-detail-name">{result.title}</p>
             <p>{result.price}</p>
             <img src={result.thumbnail} alt={result.title} />

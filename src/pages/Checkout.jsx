@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import CardCheckout from '../components/cardCheckout';
+import Nav from '../components/Nav';
 
 export default class Checkout extends Component {
   constructor() {
@@ -27,6 +28,7 @@ export default class Checkout extends Component {
     return (
       <>
         <div>
+          <Nav />
           <h2>Revise seus produtos</h2>
           <div>
             {cart.map((e) => (

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Buttons from '../components/Buttons';
+import Nav from '../components/Nav';
 import '../styles/Shopcart.css';
 
 export default class Shopcart extends Component {
@@ -57,6 +58,7 @@ export default class Shopcart extends Component {
 
     return (
       <div className="flexColumn2">
+        <Nav />
         {itemsInCart.length === 0 ? emptyMessage : cart}
         <div className="flexRow">
           {finalPrice.toFixed(2)}

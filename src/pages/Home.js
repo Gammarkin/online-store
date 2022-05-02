@@ -3,7 +3,7 @@ import Aside from '../components/Aside';
 import Card from '../components/Card';
 import * as api from '../services/api';
 import cartItemsCount from '../services/manageCartCount';
-import CartIcon from '../components/CartIcon';
+import Nav from '../components/Nav';
 
 export default class Home extends Component {
   constructor(props) {
@@ -82,10 +82,7 @@ export default class Home extends Component {
     } = this.state;
     return (
       <div>
-        <nav>
-          <h1>Online Store</h1>
-          <CartIcon quantity={quantityOfItemsInCart} />
-        </nav>
+        <Nav quantityOfItemsInCart={quantityOfItemsInCart} />
         <div className="container">
           <input
             className="search-input"
