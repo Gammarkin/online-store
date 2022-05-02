@@ -8,7 +8,7 @@ export default class CartIcon extends React.Component {
     const {quantity} = this.props;
     return (
       <Link
-        to="online-store/shopcart"
+        to="/shopcart"
         Component={Shopcart}
         data-testid="shopping-cart-button"
       >

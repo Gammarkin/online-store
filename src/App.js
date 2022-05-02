@@ -18,7 +18,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/online-store/" component={Home} />
-            <Route exact path="/online-store/shopcart" component={Shopcart} />
+            <Route exact path="/shopcart" component={Shopcart} />
             <Route
               exact
               path="/cardespecics/:query/:id"
