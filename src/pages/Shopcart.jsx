@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Buttons from '../components/Buttons';
 import '../styles/Shopcart.css';
 
-export default class extends Component {
+export default class Shopcart extends Component {
   constructor(props) {
     super(props);
 

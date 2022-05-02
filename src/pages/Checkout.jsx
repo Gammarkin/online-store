@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import CardCheckout from '../components/cardCheckout';
 
 export default class Checkout extends Component {
@@ -23,7 +23,7 @@ export default class Checkout extends Component {
   }
 
   render() {
-    const { finalPrice, cart } = this.state;
+    const {finalPrice, cart} = this.state;
     return (
       <>
         <div>
@@ -31,10 +31,10 @@ export default class Checkout extends Component {
           <div>
             {cart.map((e) => (
               <CardCheckout
-                key={ e.productId }
-                img={ e.productPhoto }
-                product={ e.productName }
-                price={ e.productPrice }
+                key={e.productId}
+                img={e.productPhoto}
+                product={e.productName}
+                price={e.productPrice}
               />
             ))}
             <h4>{`Total = ${finalPrice}`}</h4>
@@ -116,9 +116,14 @@ export default class Checkout extends Component {
             </label>
             <label htmlFor="debito">
               Cartão de Débito
-              <input type="radio" name="payment" id="debito" value="CartaoDeDebito" />
+              <input
+                type="radio"
+                name="payment"
+                id="debito"
+                value="CartaoDeDebito"
+              />
             </label>
-            <Link to="/">
+            <Link to="online-store/">
               <button type="button">Finalizar Compra</button>
             </Link>
           </form>

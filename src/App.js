@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import Home from './pages/Home';
 import Shopcart from './pages/Shopcart';
 import CardEspecifics from './pages/CardEspecifics';
@@ -17,21 +17,18 @@ class App extends Component {
       <div>
         <Router>
           <Switch>
-            <Route exact path="/" component={ Home } />
-            <Route exact path="/shopcart" component={ Shopcart } />
+            <Route exact path="/online-store/" component={Home} />
+            <Route exact path="/online-store/shopcart" component={Shopcart} />
             <Route
               exact
               path="/cardespecics/:query/:id"
-              render={ (props) => (
-                <CardEspecifics
-                  superProps={ props }
-                />
-              ) }
+              render={(props) => <CardEspecifics superProps={props} />}
             />
-            <Route exact path="/checkout" component={ Checkout } />
+            <Route exact path="/checkout" component={Checkout} />
           </Switch>
         </Router>
       </div>
     );
   }
-} export default App;
+}
+export default App;
